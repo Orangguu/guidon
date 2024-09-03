@@ -3,11 +3,33 @@
     margin: 0;
 }
 
+
+/* navbar content */
+
+.navbar {
+    position: fixed;
+    padding: 30px;
+    margin-left: 30px;
+}
+
+.navbar > a {
+    margin: 20px;
+    color: white;
+}
+
+.navbar > a:hover {
+    text-decoration: underline;
+    text-decoration-color: white;
+}
+.navbar-logo > img{
+    width: 200px;
+    height: auto;
+}
 /* header content */
 header {
     text-align: center;
     padding: 20% 10% 20% 10%;
-    background-color: aliceblue;
+    background-color: rgb(18, 41, 61);
 }
 
 .header-text {
@@ -16,10 +38,24 @@ header {
 }
 .header-text > h1{
     font-size: 100px;
+    color: white;
 }
 
 .header-text > div{
     font-size: 20px;
+}
+
+.container-intro {
+    padding: 50px;
+}
+
+.container-intro > blockquote > p{
+    font-size: 20px;
+}
+
+.container-intro > blockquote > h1{
+    color: rgb(78, 15, 155);
+    font-size: 30px;
 }
 
 /* main content */
@@ -30,6 +66,8 @@ main {
 
 
 .container-allClusters > section > h1 {
+    display: grid;
+    justify-content: center;
     font-size: 45px;
 }
 
@@ -37,25 +75,50 @@ main {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
     margin-bottom: 50px;
+    margin-top: 30px;
 }
 
 .container-cluster > section {
-    background-color: antiquewhite;
+    
+    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.08);
+    border-radius: 5px;
     padding: 20px;
-    width: 300px;
+    width: 250px;
     height: 100px;
-    margin: 20px;
+    margin: 10px;
 }
 
+/* footer styles */ 
 footer {
     text-align: center;
-    background-color: rgb(18, 45, 68);
+    background-image: url("../images/footer.png");
+    background-size: cover;
+    background-color: rgba(25, 15, 28, 0.562);
+    background-blend-mode: multiply;
     padding: 10%;
+    padding-bottom: 0%;
 }
 
-footer > h1 {
-    color: white
+#footer-message {
+    color: white;
+    padding: 30px;
+}
 
+#footer-credits {
+    padding: 30px;
+    color: gray;
+}
+/* button styles */
+button {
+    padding: 12px;
+    color: rgb(63, 63, 157);
+    background-color: white;
+    border-radius: 7px;
+    border-style: none;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Lucida Sans';
 }
 
