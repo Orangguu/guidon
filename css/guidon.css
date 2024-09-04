@@ -1,19 +1,24 @@
 * {
     padding: 0;
     margin: 0;
+    font-family: chivo-medium;
 }
 
 
 /* navbar content */
 
 .navbar {
+    display: flex;
+    align-items: center;
     position: fixed;
-    padding: 30px;
-    margin-left: 30px;
+    padding: 15px;
+    padding-left: 10%;
+    width: 100%;
+    transition: background-color 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 
 .navbar > a {
-    margin: 20px;
+    margin: 10px;
     color: white;
 }
 
@@ -25,19 +30,68 @@
     width: 200px;
     height: auto;
 }
-/* header content */
-header {
-    text-align: center;
-    padding: 20% 10% 20% 10%;
-    background-color: rgb(18, 41, 61);
+
+.navbar-bg {
+    background-color: rgb(23, 23, 131);
 }
 
+/* header content */
+header {
+    height: 100vh;
+    text-align: center;
+    align-content: center;
+    padding-left: 25%;
+    padding-right: 25%;
+    background-color: rgba(43, 35, 71, 0.658);
+    background-image: url(../images/bg0.jpg);
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 5s;
+
+    animation-name: fade-slideshow;
+    animation-direction: alternate-reverse;
+    animation-play-state: running;
+    animation-timing-function: ease-in-out;
+    animation-duration: 20s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+
+
+}
+
+@keyframes fade-slideshow {
+    0% {
+        background-image: url(../images/bg0.jpg);
+    }
+    20% {
+        background-image: url(../images/bg1.jpg);
+    }
+    40% {
+        background-image: url(../images/bg2.jpg);
+    }
+    60% {
+        background-image: url(../images/bg3.jpg);
+    }
+    80% {
+        background-image: url(../images/bg4.jpg);
+    }
+    100% {
+        background-image: url(../images/bg5.jpg);
+    }
+
+
+}
 .header-text {
     display: flex;
+    flex-direction: column;
     align-items: center;
 }
 .header-text > h1{
-    font-size: 100px;
+    line-height: 90px;
+    font-size: 95px;
+    font-family: tiempos-headline;
     color: white;
 }
 
@@ -45,30 +99,57 @@ header {
     font-size: 20px;
 }
 
-.container-intro {
-    padding: 50px;
+.header-info {
+    padding: 30px;
+    color: white;
+    
 }
 
+.header-info > p{
+    font-size: 15px;
+    font-family: chivo-regular;
+}
+
+.container-intro {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    margin-bottom: 40px;
+}
+
+.container-intro > blockquote {
+    width: 40%;
+    margin-right: 5%;
+}
 .container-intro > blockquote > p{
-    font-size: 20px;
+    font-size: 16px;
+    font-family: chivo-regular;
+    margin-bottom: 20px;
 }
 
 .container-intro > blockquote > h1{
     color: rgb(78, 15, 155);
     font-size: 30px;
+    font-family: tiempos-headline;
+}
+
+#intro-video {
+    width: 900px;
+    height: 450px;
 }
 
 /* main content */
 main {
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 12%;
+    padding-right: 12%;
 }
 
 
 .container-allClusters > section > h1 {
     display: grid;
+    font-family: tiempos-headline;
     justify-content: center;
-    font-size: 45px;
+    font-size: 40px;
 }
 
 .container-cluster {
@@ -76,7 +157,7 @@ main {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
     margin-top: 30px;
 }
 
@@ -85,7 +166,7 @@ main {
     box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.08);
     border-radius: 5px;
     padding: 20px;
-    width: 250px;
+    width: 285px;
     height: 100px;
     margin: 10px;
 }
@@ -97,28 +178,50 @@ footer {
     background-size: cover;
     background-color: rgba(25, 15, 28, 0.562);
     background-blend-mode: multiply;
-    padding: 10%;
+    padding: 5%;
     padding-bottom: 0%;
 }
 
 #footer-message {
-    color: white;
+    
+    font-family: tiempos-headline;
+    font-size: 13px;
     padding: 30px;
 }
 
+#footer-message > * {
+    font-family: tiempos-headline;
+    color: white;
+}
+
 #footer-credits {
-    padding: 30px;
-    color: gray;
+    padding: 40px;
+    font-size: 13px;
+    color: lightgray;
 }
 /* button styles */
 button {
-    padding: 12px;
+    padding: 15px;
     color: rgb(63, 63, 157);
     background-color: white;
     border-radius: 7px;
     border-style: none;
     font-size: 15px;
     font-weight: bold;
-    font-family: 'Lucida Sans';
 }
 
+/* font styles */
+@font-face {
+    font-family: chivo-medium;
+    src: url("../fonts/Chivo-Medium.ttf");
+}
+
+@font-face {
+    font-family: chivo-regular;
+    src: url("../fonts/Chivo-Light.ttf");
+}
+
+@font-face {
+    font-family: tiempos-headline;
+    src: url("../fonts/tiempos-headline-s.p.otf");
+}
