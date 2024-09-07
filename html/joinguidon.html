@@ -10,9 +10,9 @@
 <body>
     <nav class="navbar">
         <a class="navbar-logo"> <img src="../images/logo-long-white.svg"> </a>
-        <a class="navbar-home"> Home </a>
+        <a class="navbar-home" href="#"> Home </a>
         <a class="navbar-about"> About </a>
-        <select class="navbar-clusters"> Clusters </select>
+        <a class="navbar-clusters"> Clusters <img src="../images/drop-down.svg"> </a>
         <button> APPLY NOW </button>
     </nav>
     
@@ -33,7 +33,7 @@
                 <p> This year, The GUIDON marks its 95th founding anniversary with a mission to Forward with the Truth. </p>
                 <h1> As such, advancing the causes of society’s marginalized members is crucial in the publication’s bid to carry the Truth forward. </h1>
             </blockquote>
-            <iframe id="intro-video" ="https://drive.google.com/file/d/1OpApFnA5Q67qXhPwt8SmKWEV10A-F7zk/preview" allow="autoplay"></iframe>
+            <iframe id="intro-video" src="https://drive.google.com/file/d/1OpApFnA5Q67qXhPwt8SmKWEV10A-F7zk/preview" allow="autoplay"></iframe>
         </section>
 
         <section class="container-allClusters">
@@ -140,7 +140,7 @@
                     <section> 
                         <a>
                             <h2 style="color: rgb(77, 86, 211)"> Science and </h2>
-                            <h2 style="color: rgb(77, 86, 211)"> Technology 
+                            <h2 style="color: rgb(77, 86, 211); margin-top: -10px" > Technology 
                                 <svg class="arrow" width="21" height="17">
                                     <path id="Vector" fill-rule="evenodd" clip-rule="evenodd" d="M12.2466 16.7533L20.5723 8.42771L12.2466 0.102128L10.0265 2.3222L14.5621 6.85836L0.24486 6.85806L0.245436 9.99791L14.5618 9.99791L10.0265 14.5332L12.2466 16.7533Z" 
                                     fill="rgb(77, 86, 211)"></path>
@@ -295,14 +295,13 @@
 <script> 
     let currentScrollY = 0;
     const navbar = document.querySelector(".navbar")
+    const header = document.querySelector(".fade-bg-slideshow")
     window.addEventListener("scroll", () => {
         currentScrollY = window.scrollY;
-        if(currentScrollY >= 1000){
-            console.log(currentScrollY);
+        if(currentScrollY >= header.offsetTop + header.offsetHeight){
             navbar.classList.add("navbar-bg");
         }
         else{
-            console.log(currentScrollY);
             navbar.classList.remove("navbar-bg");
         }
     });
